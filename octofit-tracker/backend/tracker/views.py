@@ -49,11 +49,11 @@ def api_root(request, format=None):
         base_url = codespace_url
     
     return Response({
-        'users': f'{base_url}/api/users/',
-        'teams': f'{base_url}/api/teams/', 
-        'activities': f'{base_url}/api/activities/',
-        'workouts': f'{base_url}/api/workouts/',
-        'leaderboard': f'{base_url}/api/leaderboard/',
+        'users': f'{base_url}/api/users/?format=api',
+        'teams': f'{base_url}/api/teams/?format=api', 
+        'activities': f'{base_url}/api/activities/?format=api',
+        'workouts': f'{base_url}/api/workouts/?format=api',
+        'leaderboard': f'{base_url}/api/leaderboard/?format=api',
         'api-auth': f'{base_url}/api-auth/'
     })
 
