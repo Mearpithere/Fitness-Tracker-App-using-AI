@@ -155,7 +155,7 @@ class Leaderboard(models.Model):
     
     class Meta:
         db_table = 'leaderboard'
-        unique_together = ['type', 'period', 'period_start']
+        # unique_together = ['type', 'period', 'period_start']  # Temporarily disabled for djongo compatibility
         ordering = ['-period_start']
     
     def __str__(self):

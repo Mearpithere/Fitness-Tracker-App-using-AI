@@ -39,8 +39,14 @@ def api_root(request, format=None):
     if request.method == 'POST':
         return Response({"message": "POST request received"}, status=status.HTTP_201_CREATED)
 
-    # Get the current site's base URL
-    base_url = request.build_absolute_uri('/').rstrip('/')
+    # Use codespace URL for GitHub Codespaces environment
+    codespace_url = 'https://potential-space-computing-machine-v9494vvw5773w9x9-8000.app.github.dev'
+    
+    # Check if running locally or in codespace
+    if 'localhost' in request.get_host() or '127.0.0.1' in request.get_host():
+        base_url = 'http://localhost:8000'
+    else:
+        base_url = codespace_url
     
     return Response({
         'users': f'{base_url}/api/users/?format=api',

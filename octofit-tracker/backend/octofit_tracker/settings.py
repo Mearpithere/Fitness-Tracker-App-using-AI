@@ -25,7 +25,13 @@ SECRET_KEY = "django-insecure-nu2!q25nmt!t*_hrr_5-t%-$#9)&_xrf$)$5$59!mcndr56i!h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '*']
+ALLOWED_HOSTS = [
+    'localhost', 
+    '127.0.0.1', 
+    '0.0.0.0', 
+    'potential-space-computing-machine-v9494vvw5773w9x9-8000.app.github.dev',
+    '*'
+]
 
 
 # Application definition
@@ -155,6 +161,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:8000",  # Django development server
     "http://127.0.0.1:8000",
+    "https://potential-space-computing-machine-v9494vvw5773w9x9-8000.app.github.dev",  # GitHub Codespace URL
+    "https://potential-space-computing-machine-v9494vvw5773w9x9-3000.app.github.dev",  # React in Codespace
 ]
 
 # Allow all headers and methods for development
